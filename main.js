@@ -1,0 +1,21 @@
+/*第一种写法
+require(['jquery-1.11.0.js','a','b','c','d'],function($,b,c,d,a){
+console.log('d')
+})*/
+/*
+第二种写法
+*/
+require.config({
+	paths:{
+		'jquery':'jquery-1.11.0',
+		'a':'a',
+		'b':'b',
+		'c':'c',
+		'd':'d',
+
+	}
+})
+require(['jquery','a','b'],function($,b,c,d,a){
+	alert($)
+console.log('d')
+})
